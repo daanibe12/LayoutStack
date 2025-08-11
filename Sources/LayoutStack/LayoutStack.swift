@@ -2,8 +2,13 @@
 // https://docs.swift.org/swift-book
 import SwiftUI
 public struct LayoutHStack: Layout {
-    var alignment: VerticalAlignment = .center
-    var spacing: CGFloat? = nil
+    let alignment: VerticalAlignment
+    let spacing: CGFloat?
+    
+    public init(alignment: VerticalAlignment = .center, spacing: CGFloat? = nil) {
+        self.alignment = alignment
+        self.spacing = spacing
+    }
     
     private func sumOfWeights(subviews: Subviews) -> CGFloat {
         subviews.reduce(0) { $0 + ($1[WeightLayoutValue.self]) }
@@ -102,8 +107,13 @@ public extension View {
 
 
 public struct LayoutVStack: Layout {
-    var alignment: HorizontalAlignment = .center
-    var spacing: CGFloat? = nil
+    let alignment: HorizontalAlignment
+    let spacing: CGFloat?
+    
+    public init(alignment: HorizontalAlignment = .center, spacing: CGFloat? = nil) {
+        self.alignment = alignment
+        self.spacing = spacing
+    }
     
     private func sumOfWeights(subviews: Subviews) -> CGFloat {
         subviews.reduce(0) { $0 + ($1[WeightLayoutValue.self]) }
