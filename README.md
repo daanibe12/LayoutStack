@@ -1,6 +1,9 @@
 
 
 ## WeightLayout for SwiftUI
+![MacOS](https://img.shields.io/badge/MacOS-14+-green)
+![ios](https://img.shields.io/badge/ios-16+-red)
+[![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 
 **WeightLayout**は、SwiftUIの新しい`Layout`プロトコルを利用し、ビューに\*\*重み（weight）\*\*を割り当てることで、利用可能なスペースを比例配分するライブラリです。
 

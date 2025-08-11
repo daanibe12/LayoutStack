@@ -90,7 +90,7 @@ extension VerticalAlignment {
     }
 }
 
-extension View {
+public extension View {
     func weightV(_ weight: CGFloat) -> some View {
         layoutValue(key: LayoutVStack.WeightLayoutValue.self, value: weight)
     }
